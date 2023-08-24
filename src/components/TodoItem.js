@@ -1,8 +1,8 @@
-const TodoItem = () => {
+const TodoItem = ({ text }) => {
   return(
     <li>
       <span>[  ]</span>
-      <p>Tarea por completar</p>
+      <p>{text}</p>
       <span>X</span>
     </li>
   )
