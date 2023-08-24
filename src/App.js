@@ -1,7 +1,7 @@
 import { TodoCounter } from './components/TodoCounter.js';
 import { TodoList } from './components/TodoList.js';
 import { TodoItem } from './components/TodoItem.js';
-import { TodoSearch } from './components/TodoSearch.js';
+import { Search } from './components/Search.js';
 import { CreateTodoButton } from './components/CreateTodoButton.js';
 
 import './App.css';
@@ -17,7 +17,7 @@ const todos = [
 export const App = () =>
   <>
     <TodoCounter completed={4} total={5}/>
-    <TodoSearch />
+    <Search />
     
     <TodoList>
       {todos.map(todo =>
