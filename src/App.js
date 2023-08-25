@@ -5,7 +5,6 @@ import { Search } from './components/Search.js';
 import { CreateTodoButton } from './components/CreateTodoButton.js';
 
 import './App.css';
-import React from 'react';
 
 const todos = [
   { text: 'a', completed: true }, 
