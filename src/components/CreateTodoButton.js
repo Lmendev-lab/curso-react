@@ -1,6 +1,8 @@
 const CreateTodoButton = () => {
   return (
-    <button>
+    <button 
+      type="button" 
+      className="nes-btn is-primary">
       Create
     </button>
   );

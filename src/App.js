@@ -14,7 +14,9 @@ const todos = [
 ]
 
 export const App = () =>
-  <>
+  <section class="nes-container is-dark with-title is-centered">
+    <h3 class="title">Retro TODO</h3>
+    <i className="nes-charmander" />
     <TodoCounter completed={4} total={5}/>
     <Search />
     
@@ -28,4 +30,4 @@ export const App = () =>
     </TodoList>
 
     <CreateTodoButton />
-  </>
+  </section>
