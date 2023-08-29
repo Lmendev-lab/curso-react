@@ -1,7 +1,7 @@
-import React from "react";
+import { useState } from "react";
 
 const Search = () => {
-  const [searchValue, setSearchValue] = React.useState('');
+  const [searchValue, setSearchValue] = useState('');
 
   return(
     <input
