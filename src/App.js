@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { TodoCounter } from './components/TodoCounter.js';
 import { TodoList } from './components/TodoList.js';
 import { TodoItem } from './components/TodoItem.js';
@@ -6,28 +7,40 @@ import { CreateTodoButton } from './components/CreateTodoButton.js';
 
 import './App.css';
 
-const todos = [
+const defaultTodos = [
   { text: 'a', completed: true }, 
   { text: 'b', completed: false }, 
-  { text: 'c', completed: true }, 
+  { text: 'c', completed: false }, 
   { text: 'd', completed: true }, 
 ]
 
-export const App = () =>
-  <section class="nes-container is-dark with-title is-centered">
-    <h3 class="title">Retro TODO</h3>
-    <i className="nes-charmander" />
-    <TodoCounter completed={4} total={5}/>
-    <Search />
-    
-    <TodoList>
-      {todos.map(todo =>
-        <TodoItem 
-          key={todo.text}
-          text={todo.text}
-          completed={todo.completed}
-        />)}
-    </TodoList>
+export const App = () => {
+  const [todos, setTodos] = useState(defaultTodos);
+  const [searchValue, setSearchValue] = useState('');
 
-    <CreateTodoButton />
-  </section>
+  const completedTodos = todos.filter(todo => todo.completed).length;
+  const TotalTodos = todos.length;
+
+  return (
+    <section class="nes-container is-dark with-title is-centered">
+      <h3 class="title">Retro TODO</h3>
+      <i className="nes-charmander" />
+      <TodoCounter completed={completedTodos} total={TotalTodos}/>
+      <Search
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
+      
+      <TodoList>
+        {todos.map(todo =>
+          <TodoItem 
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+          />)}
+      </TodoList>
+
+      <CreateTodoButton />
+    </section>
+  )
+}
