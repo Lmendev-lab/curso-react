@@ -22,14 +22,14 @@ export const App = () => {
   const TotalTodos = todos.length;
 
   return (
-    <section class="nes-container is-dark with-title is-centered">
-      <h3 class="title">Retro TODO</h3>
+      <header>
       <i className="nes-charmander" />
-      <TodoCounter completed={completedTodos} total={TotalTodos}/>
+        <TodoCounter completed={completedTodos} total={TotalTodos} />
       <Search
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
+      </header>
       
       <TodoList>
         {todos.map(todo =>
