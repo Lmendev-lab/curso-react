@@ -1,0 +1,9 @@
+li {
+  display: flex;
+  margin-bottom: 1rem;
+
+  & label.nes-container.is-dark {
+    background-color: #1f567b;
+    width: 100%;
+  }
+}

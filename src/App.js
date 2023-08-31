@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { TodoCounter } from './components/TodoCounter.js';
-import { TodoList } from './components/TodoList.js';
-import { TodoItem } from './components/TodoItem.js';
+import { TodoList } from './components/TodoList';
+import { TodoItem } from './components/TodoItem';
 import { Search } from './components/Search.js';
+import { TodoCounter } from './components/TodoCounter.js';
 import { CreateTodoButton } from './components/CreateTodoButton.js';
 
 import './App.css';
