@@ -22,6 +22,9 @@ export const App = () => {
   const TotalTodos = todos.length;
 
   return (
+    <section className="nes-container is-dark with-title is-centered">
+      <h3 className="title">Retro TODO</h3>
+
       <header>
       <i className="nes-charmander" />
         <TodoCounter completed={completedTodos} total={TotalTodos} />
