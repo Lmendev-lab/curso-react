@@ -34,11 +34,8 @@ export const App = () => {
     target.checked = !target.checked;
   }
 
-  const onDeleteTodo = index => {
-    let newTodos = [...todos];
-    newTodos.splice(index, 1);
-
-    setTodos(newTodos);
+  const deleteTodo = index => {
+    setTodos(todos => todos.filter((_, i) => i !== index));
   }
 
   return (
@@ -61,7 +58,7 @@ export const App = () => {
             text={todo.text}
             completed={todo.completed}
             onComplete={event => onCompleteTodo(index, event)}
-            onDelete={() => onDeleteTodo(index)}
+            onDelete={() => deleteTodo(index)}
           />)
         })}
       </TodoList>

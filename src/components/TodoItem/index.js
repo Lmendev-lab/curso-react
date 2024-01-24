@@ -11,6 +11,11 @@ export const TodoItem = ({ text, completed, onComplete, onDelete }) => {
           className='nes-checkbox is-dark'
         />
         <span>{text}</span>
+
+        <i
+          onClick={onDelete}
+          className="nes-icon close is-small">
+        </i>
       </label>
     </li>
   )
