@@ -7,7 +7,7 @@ export const TodoItem = ({ text, completed, onComplete, onDelete }) => {
         <input
           type='checkbox'
           checked={completed}
-          onChange={onComplete}
+          onClick={onComplete}
           className='nes-checkbox is-dark'
         />
         <span>{text}</span>
